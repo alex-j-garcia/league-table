@@ -11,6 +11,8 @@ html {
 
   /* CSS Variables */
   --gray-border: hsla(0, 0%, 87%, 0.4);
+  --champions-leage-blue: hsla(221, 100%, 61%, 1.0);
+  --europa-leage-orange: rgb(242, 137, 1);
 }
 
 *,
@@ -86,9 +88,15 @@ tbody tr {
   border-bottom: 1px solid var(--gray-border);
 }
 
+/* Champions league places */
+.leagueTable-uefa {
+  /* Display & Box Model */
+  border-left: .5rem solid var(--champions-leage-blue);
+}
+
 tbody td:first-of-type {
   /* Display & Box Model */
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
 
   /* Other */
   text-align: left;
@@ -96,10 +104,17 @@ tbody td:first-of-type {
 
 tbody td {
   /* Display & Box Model */
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
 
   /* Other */
   text-align: center;
+}
+
+.leagueTable-standing > div {
+  margin-bottom: 1px;
+  margin-left: -1px;
+  padding: 1rem 0;
+  padding-left: 2rem;
 }
 
 /* Hide team crests in mobile */
@@ -109,6 +124,32 @@ tbody td {
 
 thead th:first-of-type {
   text-align: left;
+}
+
+/********************
+|| UEFA Styles
+*********************/
+
+/* Champions leage places have blue left borders */
+tbody tr:first-of-type div,
+tbody tr:nth-of-type(2) div,
+tbody tr:nth-of-type(3) div,
+tbody tr:nth-of-type(4) div {
+  border-left: 3px solid var(--champions-leage-blue);
+}
+
+/* Europa league places have orange left borders */
+tbody tr:nth-of-type(5) div {
+  border-left: 3px solid var(--europa-leage-orange);
+}
+
+/* Normalize padding for cells without left borders */
+tbody tr:nth-of-type(6) div,
+tbody tr:nth-of-type(7) div,
+tbody tr:nth-of-type(8) div,
+tbody tr:nth-of-type(9) div,
+tbody tr:nth-of-type(10) div {
+  padding-left: 2.3rem;
 }
 
 /********************
