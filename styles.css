@@ -42,6 +42,7 @@ body {
 thead th {
   /* Display & Box Model */
   border-bottom: 1px solid gray;
+  padding: 1rem 0 .5rem 0;
 
   /* Other */
   font-weight: normal;
@@ -77,6 +78,11 @@ thead th:not(th:nth-child(1)) {
   display: none;
 }
 
+tbody tr {
+  /* Display & Box Model */
+  border-bottom: 1px solid hsla(0, 0%, 85%, 0.3);
+}
+
 tbody td:first-of-type {
   /* Display & Box Model */
   padding-left: 2rem;
@@ -86,6 +92,10 @@ tbody td:first-of-type {
 }
 
 tbody td {
+  /* Display & Box Model */
+  padding: 1rem 0;
+
+  /* Other */
   text-align: center;
 }
 
