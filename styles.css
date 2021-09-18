@@ -1,0 +1,129 @@
+/********************
+|| General Styles
+*********************/
+
+html {
+  /* Display & Box Model */
+  box-sizing: border-box;
+
+  /* Other */
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  /* Display & Box Model */
+  height: 100vh;
+
+  /* Other */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.leagueTable {
+  /* Display & Box Model */
+  min-width: 320px;
+  width: 100%;
+  margin-top: 3rem;
+  table-layout: fixed;
+
+  /* Other */
+  font-size: 1.4rem;
+  outline: 1px solid black;
+  border-collapse: collapse;
+}
+
+thead th {
+  /* Display & Box Model */
+  border-bottom: 1px solid gray;
+
+  /* Other */
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+thead th:first-of-type {
+  /* Display & Box Model */
+  padding-left: 1rem;
+}
+
+/* Set fix widths of every column except first */
+thead th:not(th:nth-child(1)) {
+  /* Display & Box Model */
+  width: 30px;
+
+  /* Other */
+  text-align: center;
+}
+
+/* Hide columns in mobile */
+.leagueTable-lastFiveHeader,
+.leagueTable-drawsHeader,
+.leagueTable-lossesHeader,
+.leagueTable-goalsHeader,
+.leagueTable-concededHeader,
+.leagueTable-draws,
+.leagueTable-losses,
+.leagueTable-goals,
+.leagueTable-conceded,
+.leagueTable-lastFive {
+  /* Display & Box Model */
+  display: none;
+}
+
+tbody td:first-of-type {
+  /* Display & Box Model */
+  padding-left: 2rem;
+
+  /* Other */
+  text-align: left;
+}
+
+tbody td {
+  text-align: center;
+}
+
+/* Hide team crests in mobile */
+.leagueTable-teamLogo {
+  visibility: hidden;
+}
+
+thead th:first-of-type {
+  text-align: left;
+}
+
+/********************
+|| Utilities
+*********************/
+.noBullets {
+  /* Other */
+  list-style-type: none;
+}
+
+.troubleshooting {
+  /* Other */
+  outline: 1px solid red;
+}
+
+.darkmode {
+  background: black;
+  color: white;
+}
+
+/********************
+|| Media Queries
+*********************/
+@media only screen and (min-width: 321px) {
+  /* Display club crests */
+  .leagueTable-teamLogo {
+    /* Display & Box Model */
+    visibility: visible;
+    margin: 0 1rem;
+  }
+}
