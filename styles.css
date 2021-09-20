@@ -14,6 +14,10 @@ html {
   --gray-border: hsla(0, 0%, 87%, 0.4);
   --champions-leage-blue: hsla(221, 100%, 61%, 1.0);
   --europa-leage-orange: rgb(242, 137, 1);
+  --game-won: hsl(120, 38%, 47%);
+  --game-draw: hsl(0, 1%, 61%);
+  --game-lost: hsl(0, 99%, 46%);
+  --game-not-played: hsl(0, 1%, 61%);
 }
 
 *,
@@ -45,6 +49,26 @@ body {
   border-collapse: collapse;
 }
 
+.fas {
+  font-size: 1.6rem;
+}
+
+.fa-check-circle {
+  color: var(--game-won);
+}
+
+.fa-minus-circle {
+  color: var(--game-draw);
+}
+
+.fa-times-circle {
+  color: var(--game-lost);
+}
+
+.fa-circle {
+  color: var(--game-not-played);
+}
+
 /********************
 || Table Header
 *********************/
@@ -64,7 +88,7 @@ thead th:first-of-type {
   padding-left: 1rem;
 }
 
-/* Set fix widths of every column except first */
+/* Set fixed widths of every column except first */
 thead th:not(th:nth-child(1)) {
   /* Display & Box Model */
   width: 30px;
@@ -204,6 +228,10 @@ div > span {
 }
 
 @media only screen and (min-width: 460px) {
+  .leagueTable {
+    width: 558px;
+  }
+
   /* Show columns in mobile */
   .leagueTable-lastFiveHeader,
   .leagueTable-drawsHeader,
@@ -216,5 +244,9 @@ div > span {
   .leagueTable-conceded,
   .leagueTable-lastFive {
     display: table-cell;
+  }
+
+  thead tr th:last-of-type {
+    width: 100px;
   }
 }
