@@ -55,7 +55,6 @@ thead th {
 }
 
 thead th:first-of-type {
-  /* Display & Box Model */
   padding-left: 1rem;
 }
 
@@ -79,36 +78,29 @@ thead th:not(th:nth-child(1)) {
 .leagueTable-goals,
 .leagueTable-conceded,
 .leagueTable-lastFive {
-  /* Display & Box Model */
   display: none;
 }
 
 tbody tr {
-  /* Display & Box Model */
   border-bottom: 1px solid var(--gray-border);
 }
 
 /* Champions league places */
 .leagueTable-uefa {
-  /* Display & Box Model */
   border-left: .5rem solid var(--champions-leage-blue);
 }
 
 tbody td:first-of-type {
-  /* Other */
   text-align: left;
 }
 
 tbody td {
-  /* Other */
   text-align: center;
 }
 
 .leagueTable-standing > div {
-  margin-bottom: 1px;
-  margin-left: -1px;
-  padding: 1rem 0;
-  padding-left: 1.2rem;
+  margin: 0 0 1px -1px;
+  padding: 1rem 0 1rem 1.2rem;
 }
 
 /* Hide team crests in mobile */
@@ -117,6 +109,7 @@ tbody td {
 }
 
 thead th:first-of-type {
+  padding-left: 1.5rem;
   text-align: left;
 }
 
@@ -160,8 +153,11 @@ div > span {
 }
 
 .place {
+  /* Display & Box Model */
   display: inline-block;
   width: 18px;
+
+  /* Other */
   text-align: right;
 }
 
@@ -169,12 +165,10 @@ div > span {
 || Utilities
 *********************/
 .noBullets {
-  /* Other */
   list-style-type: none;
 }
 
 .troubleshooting {
-  /* Other */
   outline: 1px solid red;
 }
 
@@ -190,8 +184,8 @@ div > span {
   /* Display club crests */
   .clubCrest {
     /* Display & Box Model */
-    visibility: visible;
     margin: 0 1rem;
+    visibility: visible;
   }
 }
 
