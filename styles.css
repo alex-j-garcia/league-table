@@ -118,7 +118,7 @@ tbody td {
 }
 
 /* Hide team crests in mobile */
-.leagueTable-teamLogo {
+.clubCrest {
   visibility: hidden;
 }
 
@@ -152,6 +152,25 @@ tbody tr:nth-of-type(10) div {
   padding-left: 2.3rem;
 }
 
+/**
+ * Remove default space from inline elements:
+ * 1. Set font-size to 0 so spaces disappear
+ * 2. Set actual font-size of span
+ */
+ div {
+  font-size: 0; /* 1 */
+}
+
+div > span {
+  font-size: 1.4rem; /* 2 */
+}
+
+.place {
+  display: inline-block;
+  width: 18px;
+  text-align: right;
+}
+
 /********************
 || Utilities
 *********************/
@@ -175,9 +194,13 @@ tbody tr:nth-of-type(10) div {
 *********************/
 @media only screen and (min-width: 321px) {
   /* Display club crests */
-  .leagueTable-teamLogo {
+  .clubCrest {
     /* Display & Box Model */
     visibility: visible;
     margin: 0 1rem;
   }
+}
+
+.leagueTable-place {
+  text-align: right;
 }
