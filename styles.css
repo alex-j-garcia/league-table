@@ -10,6 +10,7 @@ html {
   font-size: 62.5%;
 
   /* CSS Variables */
+  --gray-text: hsl(0, 0%, 69%);
   --gray-border: hsla(0, 0%, 87%, 0.4);
   --champions-leage-blue: hsla(221, 100%, 61%, 1.0);
   --europa-leage-orange: rgb(242, 137, 1);
@@ -44,12 +45,17 @@ body {
   border-collapse: collapse;
 }
 
+/********************
+|| Table Header
+*********************/
+
 thead th {
   /* Display & Box Model */
   border-bottom: 1px solid var(--gray-border);
   padding: 1rem 0 .5rem 0;
 
   /* Other */
+  color: var(--gray-text);
   font-weight: normal;
   font-size: 1.2rem;
 }
@@ -80,6 +86,10 @@ thead th:not(th:nth-child(1)) {
 .leagueTable-lastFive {
   display: none;
 }
+
+/********************
+|| Table Body
+*********************/
 
 tbody tr {
   border-bottom: 1px solid var(--gray-border);
@@ -191,4 +201,20 @@ div > span {
 
 .leagueTable-place {
   text-align: right;
+}
+
+@media only screen and (min-width: 460px) {
+  /* Show columns in mobile */
+  .leagueTable-lastFiveHeader,
+  .leagueTable-drawsHeader,
+  .leagueTable-lossesHeader,
+  .leagueTable-goalsHeader,
+  .leagueTable-concededHeader,
+  .leagueTable-draws,
+  .leagueTable-losses,
+  .leagueTable-goals,
+  .leagueTable-conceded,
+  .leagueTable-lastFive {
+    display: table-cell;
+  }
 }
