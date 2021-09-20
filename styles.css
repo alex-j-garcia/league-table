@@ -10,7 +10,8 @@ html {
   font-size: 62.5%;
 
   /* CSS Variables */
-  --gray-text: hsl(0, 0%, 69%);
+  --gray-text: hsl(0, 0%, 46%);
+  --black-text: hsla(0, 0%, 10%, 1.0);
   --gray-border: hsla(0, 0%, 87%, 0.4);
   --champions-leage-blue: hsla(221, 100%, 61%, 1.0);
   --europa-leage-orange: rgb(242, 137, 1);
@@ -45,6 +46,7 @@ body {
 
   /* Other */
   font-size: 1.4rem;
+  color: var(--black-text);
   border: 1px solid var(--gray-border);
   border-collapse: collapse;
 }
@@ -247,6 +249,12 @@ div > span {
   }
 
   thead tr th:last-of-type {
-    width: 100px;
+    width: 110px;
+  }
+}
+
+@media only screen and (min-width: 559px) {
+  .leagueTable {
+    width: 100%;
   }
 }
