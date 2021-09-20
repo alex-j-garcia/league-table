@@ -40,8 +40,9 @@ body {
 .leagueTable {
   /* Display & Box Model */
   min-width: 320px;
+  max-width: 753px;
   width: 100%;
-  margin-top: 3rem;
+  margin: 3rem auto;
   table-layout: fixed;
 
   /* Other */
@@ -180,7 +181,7 @@ tbody tr:nth-of-type(10) div {
  * 1. Set font-size to 0 so spaces disappear
  * 2. Set actual font-size of span
  */
- div {
+table div {
   font-size: 0; /* 1 */
 }
 
@@ -253,7 +254,7 @@ div > span {
   }
 }
 
-@media only screen and (min-width: 559px) {
+@media only screen and (min-width: 569px) {
   .leagueTable {
     width: 100%;
   }
