@@ -72,6 +72,103 @@ body {
   color: var(--game-not-played);
 }
 
+.legend {
+  /* Display & Box Model */
+  width: 100%;
+  max-width: 753px;
+  margin: 0 auto;
+
+  /* Other */
+  font-size: 1.2rem;
+}
+
+.legend-container {
+  /* Display & Box Model */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1rem;
+  padding: 1.5rem 1.5rem 0;
+  border: 1px solid hsla(0, 0%, 75%, 0.3);
+
+  /* Other */
+  background: hsla(0, 0%, 75%, 0.1);
+  border-radius: 3px;
+}
+
+.legend-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.legend-wrapper > div {
+  margin-bottom: .5rem;
+}
+
+.legend-wrapper > div:first-of-type {
+  /* Other */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.champions,
+.europa,
+.relegation {
+  /* Display & Box Model */
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+
+  /* Other */
+  vertical-align: middle;
+}
+
+.wins,
+.draws,
+.losses {
+  font-size: 1.2rem;
+}
+
+.fas-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.champions {
+  background: #4285F4;
+}
+
+.europa {
+  background: #FA7B17;
+}
+
+.relegation {
+  background: #EA4335;
+}
+
+.legend-wrapper > div > div {
+  display: inline-block;
+}
+
+.legend-wrapper > div:not(div:first-child) {
+  /* Display & Box Model */
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  /* Display & Box Model */
+  max-width: 100%;
+  margin-left: 1rem;
+  flex: 1;
+
+  /* Other */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /********************
 || Table Header
 *********************/
@@ -185,7 +282,7 @@ table div {
   font-size: 0; /* 1 */
 }
 
-div > span {
+.leagueTable span {
   font-size: 1.4rem; /* 2 */
 }
 
@@ -251,6 +348,20 @@ div > span {
 
   thead tr th:last-of-type {
     width: 110px;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .legend-container {
+    flex-direction: row;
+  }
+
+  .legend-container > div {
+    flex: 1;
+  }
+
+  .legend-wrapper {
+    margin-right: 1.3rem;
   }
 }
 
